@@ -1,70 +1,43 @@
 body{
-    background-color: greenyellow;
-    display: flex;
-    justify-content: center;
-    margin: 32px;
-}
-.container{
-    background-color: green;
-    text-align: center;
-    position: fixed;
-    top: 10%;
-    left: 10%;
-    right: 10%;
-   
-    z-index: 100;
-    border-radius: 25px;
-    color: white;
+    background-color: black;
 }
 
-.inNewShop{
+.allForm{
+    background-color: grey;
+    text-align: center;
+}
+.allForm h1{
+    color: rgb(22, 22, 86);
+}
+.allForm input{
+    border:1px solid black;
+    height: 20px;
+    width: 200px;
+}
+.allForm button{
+    border: 1px solid black;
+    background-color: white;
+    padding: 3px;
+    color: rgb(22, 22, 86);
+    font-weight: bold;
+
+}
+
+.todoLists{
+  display: flex;
+  justify-content: center;
+}
+
+.toDoItem{
+    border: 2px solid rgb(22, 22, 86);
+    width: 300px;
+    height: 50px;
     display: flex;
-    justify-content: center;
     align-items: center;
-   
-}
-.inNewShop input, .modal button{
-    border: none;
-    border-radius: 12px;
-    margin: 8px;
-    background-color: greenyellow;
-}
-.modal button{
-    color: green;
-    font-weight: bold;
-    padding: 5px;
-}
-
-
-.inSearch{
-    border: 3px solid green;
-    border-radius: 12px;
-    margin: 4px;
-    padding: 5px;
-    margin-bottom: 45px;
-    margin-left: 165px;
+    margin: 10px;
 
 }
-.addShopBtn{
-    color: white;
-    font-weight: bold;
-    padding: 7px;
-    border: none;
-    border-radius: 12px;
-    margin: 8px;
-    background-color: green;
-    margin-left: 165px;
-    margin-top: 35px;
-}
 
-.tablesCont{
-    background-color: rgba(69, 255, 153, 0.393);
-    padding: 12px;
-    border-radius: 12px;
-    border: 1px solid gray;
-}
-.tablesCont td{
-    border: 1px solid green;
-    padding: 5px;
-    text-align: center;
+.toDoItem button{
+    height: 25px;
 }
