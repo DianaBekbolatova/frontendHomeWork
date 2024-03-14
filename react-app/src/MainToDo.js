@@ -1,11 +1,12 @@
 import React from 'react'
-import ToDoList from './components/ToDoList'
+import Cards from './components/Cards'
 
 import './Main.css'
+
 export default function Main() {
   return (
     <div>
-        <ToDoList></ToDoList>
+        <Cards></Cards>
 
     </div>
   )
