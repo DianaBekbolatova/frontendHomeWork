@@ -1,0 +1,97 @@
+body{
+    background-color: #caf1d5;
+}
+.all{
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.cards-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card-cont{
+    margin: 12px;
+    border-radius: 12px;
+    padding: 12px;
+    background-color: white;
+    width: 241px;
+    height: 378px;
+}
+.rateCard{
+    border-radius: 10px;
+    background-color: yellow;
+    font-weight: bold;
+    font-size: 13px;
+    width: 45px;
+    padding: 5px;
+    text-align: center;
+}
+.img-cont{
+  text-align: center;
+}
+.img-cont img{
+    width: 140px;
+    height: 140px;
+    border-radius: 5px;
+    
+}
+.titleCard{
+    color: #464c53;
+    font-size: 14px;
+}
+.desCard{
+    font-size: 10px;
+    color: #464c53;
+}
+.priceCard{
+    font-weight: bold;
+    font-size: 16px;
+}
+.buyCard{
+    margin-top: 22px;
+    border: none;
+    border-radius: 12px;
+    padding: 5px;
+    width: 120px;
+    background-color: #2196f3;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.forModal{
+   text-align: center;
+}
+.forModal button{
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 200px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 12px;
+}
+
+
+.modal-back{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    z-index: 999;
+}
+.modal-cont{
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    width: 300px;
+    z-index: 1000;
+    background-color: #2196f3;
+    transform: translate(-50%, -50%);
+}
