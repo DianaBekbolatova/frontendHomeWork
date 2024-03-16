@@ -12,29 +12,57 @@ export default function Cards() {
     } else {
       setCards(Object.values(data.products))
     }
-  };
+  }
 
   useEffect(() => {
-    getCards();
-  }, []);
+    getCards()
+  }, [])
 
+
+
+  //filter
+  const [filter, setFilter] = useState('default')
+  const [filteredCards, setFilteredCards] = useState([])
+
+  useEffect(() => {
+    if (filter === 'highToLow') {
+      setFilteredCards([...cards].sort((a, b) => b.price - a.price))
+    } else if (filter === 'lowToHigh') {
+      setFilteredCards([...cards].sort((a, b) => a.price - b.price))
+    } else {
+      setFilteredCards([...cards])
+    }
+  }, [filter, cards])
   const addProduct = (newProduct) => {
     setCards([...cards, newProduct])
-  };
+  }
 
   return (
     <div className='all'>
-      <h3>Смартфоны в Астане</h3>
-      <p className='titleCard'>Найдено {cards.length} товаров</p>
+    
+      <div className='header'>
+        <div className='titles-all'>
+        <h3>Смартфоны в Астане</h3>
+        <p className='titleCard'>Найдено {cards.length} товаров</p>
+        </div>
+   <div className='filter-cards'>
+    <select value={filter} onChange={(event) => setFilter(event.target.value)} className='filter-cards' required>
+          <option value='default' selected disabled></option>
+          <option value='highToLow'>Сначала дорогие</option>
+          <option value='lowToHigh'>Сначала дешевые</option>
+        </select>  
+   </div>
+       
+      </div>
       <div className='cards-container'>
-        {cards.map(card => (
+        {filteredCards.map(card => (
           <div key={card.id} className='card-cont'>
             <div className='img-cont'>
               {card.image ? (
-                <img src={card.image} />
+                <img src={card.image} alt="Product" />
               ) : (
                 card.images && card.images.length > 0 && (
-                  <img src={card.images[0]} />
+                  <img src={card.images[0]} alt="Product" />
                 )
               )}
             </div>
@@ -48,5 +76,5 @@ export default function Cards() {
       </div>
       <ModalProducts addProduct={addProduct} />
     </div>
-  );
+  )
 }

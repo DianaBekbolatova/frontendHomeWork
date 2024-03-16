@@ -1,9 +1,14 @@
 body{
-    background-color: #caf1d5;
+    background-color: #a0d1ae;
 }
 .all{
     margin-left: 35px;
     margin-right: 35px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .cards-container{
     display: flex;
@@ -26,6 +31,7 @@ body{
     width: 45px;
     padding: 5px;
     text-align: center;
+    color: #000;
 }
 .img-cont{
   text-align: center;
@@ -47,6 +53,7 @@ body{
 .priceCard{
     font-weight: bold;
     font-size: 16px;
+    color: #000;
 }
 .buyCard{
     margin-top: 22px;
@@ -94,4 +101,35 @@ body{
     z-index: 1000;
     background-color: #2196f3;
     transform: translate(-50%, -50%);
+}
+body.cont-dark{
+   background-color: #10381c;
+   color: #fff;
+}
+.cont-light{
+    background-color: #a0d1ae;
+}
+.imgs-switch{
+    width: 60px;
+    margin-top: 12px;
+    margin-left: 35px;
+   
+}
+.for-switch{
+    display: flex;
+    justify-content: space-between;
+}
+body.font-cursive{
+    font-style: italic;
+}
+.filter-cards{
+  width: 160px;
+  height: 10px;
+  font-size: 13px;
+  border: none;
+  border-radius: 12px;
+  padding: 5px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #57a44b;
 }
